@@ -1,3 +1,5 @@
+# Performance Period Goal - [Objection.js Tutorial](https://www.youtube.com/watch?v=zbIl2kuP7tE&list=PL9bl9PtF4lstwO_IcGRsoirLCGRIiFTbU&index=8&t=1677s)
+
 ## Setup
  - Go to directory where you want to build project: `mkdir objection-tutorial`
  - Inside of directory `npm init -y` creates `package.json` file
