@@ -56,3 +56,6 @@ seeds: {
 
 ## Relation mappings --> see user.js
  - Add .withGraphFetched('channel') to load channel object with user object
+
+## View JSON response in browser
+ - localhost:8080/table/id --> localhost:8080/user/1
