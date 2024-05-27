@@ -1,17 +1,25 @@
 # Performance Period Goal - [Objection.js Tutorial](https://www.youtube.com/watch?v=zbIl2kuP7tE&list=PL9bl9PtF4lstwO_IcGRsoirLCGRIiFTbU&index=8&t=1677s)
 
-## Setup
+## To view result of the tutorial
+ - clone git repository
+ - `npm install` 
+ - `npm run dev`
+ - View JSON response in browser: localhost:8080/table/id --> localhost:8080/user/1<br><br>
+
+## Tutorial Instructions
+
+### Setup
  - Go to directory where you want to build project: `mkdir objection-tutorial`
  - Inside of directory `npm init -y` creates `package.json` file
 
-## Installations
+### Installations
  - `npm install express objection knex pg`: installs express, objection.js, knex.js, and postgres drivers
  - Install postgres locally if needed: use UI pgAdmin or DBeaver to manage db
  - `npm i --save-dev nodemon`
  - Open project, create `index.js` file 
  - In `package.json`, add to scripts: `dev: "nodemon index.js"` for hot reload
 
-## Set up database
+### Set up database
  - Create a folder `db` for database
  - Create two more folders in this folder, `migrations` and `seeds`
  - Knex pulls configuration from knexfile.js, `npx knex init` - use npx if it isn't installed globally
@@ -28,7 +36,7 @@ seeds: {
     directory: './seeds',
 } 
 
-## Migrations
+### Migrations
  - Create database schema, create first migration
  - As database evolves, you need a tool to properly manage it --> migrations
  - `npx knex migrate:make init`
@@ -38,26 +46,26 @@ seeds: {
  - "migrate": "npx knex migrate:latest --knexfile ./db/knexfile.js" --> change knex command to a shorter command
  - `npm run migrate`
 
-## Seeds
+### Seeds
  - Create seed data, initial data
  - add to scripts: "make-seed": "npx knex seed:make dev --knexfile .db/knexfile.js"
  - "seed": "npm knex seed:run --knexfile ./db/knexfile.js",
 
-## Create database models
+### Create database models
  - /db/models...channel, user, and video.js
  - See files for syntax
 
-## Create db-setup.js file
+### Create db-setup.js file
  - Globally install database inside of all models
  - Now Objection.js knows how to access the database
  - See `db/db-setup.js` for syntax
 
-## index.js --> setup Express server to fun
+### index.js --> setup Express server to fun
  - See file for syntax
  - `npm run dev`
 
-## Relation mappings --> see user.js
+### Relation mappings --> see user.js
  - Add .withGraphFetched('channel') to load channel object with user object
 
-## View JSON response in browser
+### View JSON response in browser
  - localhost:8080/table/id --> localhost:8080/user/1
